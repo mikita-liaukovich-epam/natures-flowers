@@ -1,0 +1,13 @@
+.navbar {
+  z-index: 2;
+  font-size: 20px;
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+}

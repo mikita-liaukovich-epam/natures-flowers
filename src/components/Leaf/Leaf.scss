@@ -1,0 +1,63 @@
+@import '../../variables.scss';
+
+.leaf {
+  color: $color-text-light;
+
+  a {
+    color: $color-text-light;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 2rem;
+    padding-top: 40px;
+  }
+
+  p {
+    font-size: 1.4rem;
+    padding-top: 20px;
+    text-align: justify;
+  }
+  
+  &-wrapper {
+    position: absolute;
+    bottom: 140px;
+    right: 50%;
+    height: 500px;
+    width: 700px;
+    z-index: 2;
+
+    &_right {
+      left: 50%;
+    }
+
+    &::before {
+      content: "";
+      width: 45%;
+      height: 100%;
+      float: left;  
+      shape-outside: polygon(0 0, 0 100%, 100% 100%, 100% 90%, 85% 86%, 64% 79%, 45% 70%, 33% 63%, 22% 55%, 11% 44%, 5% 35%, 10px 30%);
+      clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 90%, 85% 86%, 64% 79%, 45% 70%, 33% 63%, 22% 55%, 11% 44%, 5% 35%, 10px 30%);
+      shape-margin: 25px;
+    }
+  }
+
+  height: 100%;
+  border-top-left-radius: 1%;
+  border-top-right-radius: 70%;
+  border-bottom-left-radius: 85%;
+  border-bottom-right-radius: 1%;
+
+  background: linear-gradient(45deg, $color-accent-mod, $color-accent);
+
+  &::before {
+    content: "";
+    width: 55%;
+    height: 100%;
+    float: right;
+    shape-outside: polygon(0 0, 100% 0, 100% 100%, 100% 76%, 95% 50%, 75% 29%, 47% 14%, 22% 6%, 0% 2%, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 76%, 95% 50%, 75% 29%, 47% 14%, 22% 6%, 0% 2%, 0 0);
+    shape-margin: 25px;
+  }
+} 
