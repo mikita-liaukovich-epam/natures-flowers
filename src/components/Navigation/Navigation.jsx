@@ -12,7 +12,7 @@ export default function Navigation() {
           <Nav.Link href="#order">Сделать заказ</Nav.Link>
           <Nav.Link href="#sales">Скидки</Nav.Link>
         </Nav>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <Logo />
         </Navbar.Brand>
         <Nav className="navbar-right">

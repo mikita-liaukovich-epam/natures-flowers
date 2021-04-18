@@ -1,8 +1,18 @@
 @import '../../variables.scss';
 
 .logo {
-  width: 250px;
-  
+  width: 350px;
+  position: relative;
+
+  &-flower {
+    position: absolute;
+    width: 680px;
+    left: calc(50% - 340px);
+    bottom: -220px;
+    z-index: -1;
+    pointer-events: none;
+  }
+
   img {
     width: 100%;
     filter: hue-rotate(40deg) brightness(0.9);
@@ -12,8 +22,8 @@
     color: $color-accent-mod;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 17px;
-    margin-top: -22px;
+    font-size: 24px;
+    margin-top: -32px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
 }

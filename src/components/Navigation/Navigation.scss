@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .navbar {
   z-index: 2;
   font-size: 20px;
@@ -8,6 +10,14 @@
 
     @media screen and (max-width: 768px) {
       flex-direction: column;
+    }
+  }
+
+  .nav-link {
+    color: $color-text-dark !important;
+
+    &:hover {
+      color: $color-accent !important;
     }
   }
 }

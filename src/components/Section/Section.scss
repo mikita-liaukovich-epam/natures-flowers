@@ -2,13 +2,32 @@
 
 .section {
   height: 100vh;
-  scroll-snap-align: start;
+  position: relative;
 
   &-label {
+    font-family: 'Caveat', 'Open Sans', 'Segoe UI', sans-serif;
+    font-weight: 600;
+    font-size: 60px;
     padding: 0 110px;
-    
+    font-weight: 700;
+
     &_left {
       text-align: end;
+    }
+  }
+
+  &-spiral {
+    position: absolute;
+    left: calc(50% + 40px);
+    top: calc(50% + 20px);
+    transform: scaleX(-1) rotate(45deg);
+
+    .section-leaf_right & {
+      transform: rotate(25deg);
+      width: 400px;
+      left: auto;
+      right: 50%;
+      top: calc(50% + 60px);
     }
   }
 
@@ -16,14 +35,14 @@
     height: 100vh;
     padding: 20% 0;
     position: relative;
-  
+
     // колючка
     &::after {
       content: "";
       position: absolute;
       border-top: 60px solid transparent;
       border-bottom: 60px solid transparent;
-      border-left: 60px solid green; 
+      border-left: 60px solid green;
       height: 0px;
       width: 0px;
       top: 20%;
@@ -34,12 +53,12 @@
 
     &_right::after {
       top: auto;
-      bottom: 15%;
+      bottom: 45%;
       left: auto;
       right: calc(50% + 6px);
-      transform: skew(10deg, -11deg) rotate(285deg) scaleX(-1);
+      transform: skew(10deg, -11deg) rotate(250deg) scaleX(-1);
     }
-  
+
     // стебель
     &::before {
       content: "";
@@ -48,7 +67,7 @@
       height: 100%;
       width: 76px;
       top: 0;
-      left: calc(50% - 38px);
+      left: calc(50% - 25px);
       z-index: 1;
     }
   }

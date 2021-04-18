@@ -1,5 +1,8 @@
 @import '../../variables.scss';
 
+$leaf-right-polygon: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 98% 63%, 95% 50%, 75% 29%, 47% 14%, 22% 6%, 0% 2%, 0 0);
+$leaf-left-polygon: polygon(0 0, 0 100%, 100% 100%, 100% 90%, 85% 86%, 64% 79%, 45% 70%, 33% 63%, 22% 55%, 11% 44%, 5% 35%, 10px 30%);
+
 .leaf {
   color: $color-text-light;
 
@@ -10,16 +13,18 @@
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding-top: 40px;
+    font-family: 'Caveat', 'Open Sans', 'Segoe UI', sans-serif;
+    font-weight: 700;
   }
 
   p {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
     padding-top: 20px;
     text-align: justify;
   }
-  
+
   &-wrapper {
     position: absolute;
     bottom: 140px;
@@ -36,9 +41,9 @@
       content: "";
       width: 45%;
       height: 100%;
-      float: left;  
-      shape-outside: polygon(0 0, 0 100%, 100% 100%, 100% 90%, 85% 86%, 64% 79%, 45% 70%, 33% 63%, 22% 55%, 11% 44%, 5% 35%, 10px 30%);
-      clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 90%, 85% 86%, 64% 79%, 45% 70%, 33% 63%, 22% 55%, 11% 44%, 5% 35%, 10px 30%);
+      float: left;
+      shape-outside: $leaf-left-polygon;
+      clip-path: $leaf-left-polygon;
       shape-margin: 25px;
     }
   }
@@ -56,8 +61,8 @@
     width: 55%;
     height: 100%;
     float: right;
-    shape-outside: polygon(0 0, 100% 0, 100% 100%, 100% 76%, 95% 50%, 75% 29%, 47% 14%, 22% 6%, 0% 2%, 0 0);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 76%, 95% 50%, 75% 29%, 47% 14%, 22% 6%, 0% 2%, 0 0);
+    shape-outside: $leaf-right-polygon;
+    clip-path: $leaf-right-polygon;
     shape-margin: 25px;
   }
-} 
+}
